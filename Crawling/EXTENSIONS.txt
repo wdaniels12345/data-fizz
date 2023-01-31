@@ -1,0 +1,12 @@
+Products outside of the Household Essentials category.
+
+This program can be edited to display products outside of the household essentials category. I would assume that every product displayed on walgreens.com domain 
+uses the same html tags so the only things that would need to be updated were the url's by which the script chooses to launch. A function to traverse the walgreens.com 
+must also be implemented, because I failed to do that in the actual program. This is elaborated upon in the README file. 
+
+
+Domains beyond Walgreens.com.
+
+This becomes a little more difficult. Logically, the program should work for any webpage that displays product information, however every website is built with different html designs. 
+So not only will URL's need to be edited like I mentioned in the previous answer, but also tags used to parse the html information must be edited, because every website will have
+seperate and unique names for this info. 

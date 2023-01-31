@@ -1,77 +1,29 @@
-# Crawling
+webCrawler.js is designed with the intent to scrape product information from walgreens household essentials.
+The only outside libraries needed for this program are axios and cheerio. 
+Both of these can be easily installed with the terminal commands - 
 
-## Purpose
+npm install axios
+npm install cheerio
 
-This exercise is designed to test your ability to use JavaScript, object-oriented design principles, data structures, and standard algorithms to create a web crawler. We will not only be looking at the data points you have collected from the web, but at the style of your code, its modularity, its extensibility, and ease at which the app can be built and tested. As a small team, we believe these principles are a key element of our continued success.
- 
+Axios is neccesary because it allows the script to make http requests from node. 
+Cheerio allows for html to be parsed from a website to node. 
 
-## Problem Description
+Unfortunately this program does not display all of the information requested from the github assignment. 
+I cannot get the program to display the UPC or product description. 
+This is because that information is located on a seperate URL and I cannot get the crawler to traverse to any seperate pages. 
 
-You will need to design and implement a basic web crawler that has two primary functions:
+Once these libraries are installed assuming you are in the correct directory 
+the program should run with the command -
 
- 1. The crawler must navigate from a “starting url” to a “listing page” on the website. 
- 2. It must also collect a small number of specified attributes on the page. 
-
-Usually we collect all products available on a site, but for this coding challenge we would like you to start on the "Walgreens.com" home page and navigate to the “Household Essentials” category. Navigate to at least 10 different products in this category and grab the following information (if it is available on the page):
-
- * Product Name
- * List Price
- * Description
- * Product Dimensions
- * Image URLs
- * Product UPC Code
+node webCrawler.js
 
 
-Your application should output its results in a valid and well structured JSON document like the example below:
+The output should look similar to this. 
 
-
-```json
 {
-    "product": {
-        "id": 1,
-        "productName": "Free & Clear Laundry Detergent",
-        "listPrice": 7.69,
-        "description": "When you have sensitive skin, clothes can itch and irritate. You deserve a free & gentle liquid laundry detergent for sensitive skin that delivers value. ARM & HAMMER Sensitive Skin Free & Clear liquid laundry detergent is concentrated with 2X powerful stain fighters in every drop vs. leading bargain detergent.",
-        "productDimensions": "3.27 x 6.17 x 9.95 inches",
-        "imageURLs": [
-            "https://pics.drugstore.com/prodimg/648742/900.jpg",
-            "https://pics.drugstore.com/prodimg/648742/2_900.jpg",
-            "https://pics.drugstore.com/prodimg/648742/3_900.jpg"
-        ],
-        "productUPC": 03320097562,
-        "sourceURL": "https://www.walgreens.com/store/c/arm-%26-hammer-free-%26-clear-laundry-detergent/ID=300427093-product"
-    }
-}
-
-```
-
-Once your solution is completed, please include a README.md file with build and execution instructions for your application. You will also need to add an EXTENSIONS.txt file to your solution that notes how your application could be extended to handle the following:
-
-1. Products outside of the Household Essentials category.
-2. Domains beyond Walgreens.com.
-
-To begin, fork this repository to your personal Github account. We ask that you submit your solution within 1 week of forking the repo.
-
-## Submission Requirements
-
-* Use Javascript.
-* You may use any third party libraries you wish. Any dependencies must be fully managed by a standard build tool for the language used.
-* You must follow standard Object Oriented Design principles and techniques (submissions using only a single class are not acceptable).
-* Email us with a link to your repository fork when you have finished your submission. 
-
-## What We'll Be Looking For
-
-* Code readability and reusability.
-* Detail orientation.
-* Clean and consistent data formatting.
-* Testing is not required, but we'd love to see it.
-
-## Useful Tools
-
-If you are uncertain about where to start with your submission, consider looking into the following JavaScript tools:
-
-* NodeJS: A JavaScript runtime environment that will enable you to utilize JavaScript outside of a browser.
-* Cheerio: An implementation of jQuery meant for exposing the DOM of a given html page.
-* Headless Crawling: Web crawling tools built for the purposes of browsing the internet without utilizing a user interface.
-
-If you have any questions about this challenge, please let us know. 
+    brand: 'Clorox',
+    title: 'Clean-Up All Purpose Cleaner with Bleach, Spray Bottle Original ',
+    image: '//pics.walgreens.com/prodimg/194954/450.jpg',
+    link: 'https://walgreens.com/store/c/clorox-clean-up-all-purpose-cleaner-with-bleach,-spray-bottle-original/ID=prod4300-product',
+    price: '$3.99 $0.12  / oz'
+},
