@@ -1,3 +1,7 @@
+Walker Daniels
+Datafiniti WebCrawler Project
+1/31/23
+
 webCrawler.js is designed with the intent to scrape product information from walgreens household essentials.
 The only outside libraries needed for this program are axios and cheerio. 
 Both of these can be easily installed with the terminal commands - 
