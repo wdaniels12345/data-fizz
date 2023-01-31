@@ -21,13 +21,4 @@ the program should run with the command -
 
 node webCrawler.js
 
-
-The output should look similar to this. 
-
-{
-    brand: 'Clorox',
-    title: 'Clean-Up All Purpose Cleaner with Bleach, Spray Bottle Original ',
-    image: '//pics.walgreens.com/prodimg/194954/450.jpg',
-    link: 'https://walgreens.com/store/c/clorox-clean-up-all-purpose-cleaner-with-bleach,-spray-bottle-original/ID=prod4300-product',
-    price: '$3.99 $0.12  / oz'
-},
+Thank you for the opportunity datafiniti!
